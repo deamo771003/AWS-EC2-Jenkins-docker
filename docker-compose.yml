@@ -1,5 +1,8 @@
 version: '3.8'
 services:
+  my-jenkins-image:
+    build: .
+
   jenkins:
     image: my-jenkins-image
     user: root
@@ -12,5 +15,8 @@ services:
       - jenkins_home:/var/jenkins_home
     mem_limit: 600M
     cpus: 0.7
+    depends_on:
+      - my-jenkins-image
+      
 volumes:
   jenkins_home:
