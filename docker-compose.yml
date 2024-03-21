@@ -10,7 +10,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
       - jenkins_home:/var/jenkins_home
-    mem_limit: 500M
-    cpus: 0.5
+    mem_limit: 550M
+    cpus: 0.7
 volumes:
   jenkins_home:
