@@ -4,7 +4,6 @@ services:
     build: .
 
   jenkins:
-    network_mode: "host"
     image: my-jenkins-image
     user: root
     ports:
