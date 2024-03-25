@@ -8,9 +8,7 @@ services:
       - "8080:8080"
       - "50000:50000"
     volumes:
-      # - /home/ec2-user/.npm:/tmp/npm-cache
       - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/bin/docker:/usr/bin/docker
       - jenkins_home:/var/jenkins_home
     mem_limit: 600M
     cpus: 0.7
