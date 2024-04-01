@@ -1,7 +1,6 @@
 version: '3.8'
 services:
   my-jenkins:
-    network_mode: "host"
     build: .
     user: root
     ports:
@@ -12,7 +11,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins_home:/var/jenkins_home
     mem_limit: 600M
-    cpus: 0.7
 
 volumes:
   jenkins_home:
