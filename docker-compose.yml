@@ -10,7 +10,6 @@ services:
       - /var/jenkins/.env:/var/jenkins/.env
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins_home:/var/jenkins_home
-      - /home/ec2-user/.npm:/var/jenkins_home/.npm
     mem_limit: 2.5G
 
 volumes:
