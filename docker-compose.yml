@@ -2,13 +2,13 @@ version: '3.8'
 services:
   my-jenkins:
     build: .
-    user: root
     ports:
       - "8080:8080"
       - "50000:50000"
     volumes:
       - /var/jenkins/.env:/var/jenkins/.env
       - /var/run/docker.sock:/var/run/docker.sock
+      - /home/ec2-user/AWS-EC2-Jenkins-docker/.ssh:/var/jenkins_home/.ssh
       - jenkins_home:/var/jenkins_home
     mem_limit: 2.5G
 
