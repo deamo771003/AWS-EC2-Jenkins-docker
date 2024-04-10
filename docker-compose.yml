@@ -2,6 +2,7 @@ version: '3.8'
 services:
   my-jenkins:
     build: .
+    # 必須 root 才能使用 docker.io
     user: root
     ports:
       - "8080:8080"
@@ -9,7 +10,7 @@ services:
     volumes:
       - /var/jenkins/.env:/var/jenkins/.env
       - /var/run/docker.sock:/var/run/docker.sock
-      - /home/ec2-user/AWS-EC2-Jenkins-docker/.ssh:/var/jenkins_home/.ssh
+      - /home/ec2-user/.ssh:/var/jenkins_home/.ssh
       - jenkins_home:/var/jenkins_home
     mem_limit: 2.5G
 
